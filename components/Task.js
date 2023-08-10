@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Task = ({ text }) => {
   return (
-    <View>
-      <Text>{text}</Text>
+    <View style={styles.item}>
+      <View style={styles.itemLeft}>
+        <TouchableOpacity style={styles.square}></TouchableOpacity>
+
+        <Text style={styles.itemText}>{text}</Text>
+      </View>
+      <View style={styles.circular}></View>
     </View>
   );
 };
