@@ -8,3 +8,7 @@ const Task = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
+
+export default Task;
