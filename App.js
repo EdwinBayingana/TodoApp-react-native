@@ -1,4 +1,10 @@
-import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
@@ -18,7 +24,10 @@ export default function App() {
       {/* Add-a-task section */}
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      ></KeyboardAvoidingView>
+        style={styles.writeTaskWrapper}
+      >
+        <TextInput style={styles.input} placeholder={'Write a task'} />
+      </KeyboardAvoidingView>
     </View>
   );
 }
