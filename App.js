@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
@@ -12,9 +12,13 @@ export default function App() {
           {/* Tasks will be displayed down here */}
           <Task text={'Task 1'} />
           <Task text={'Task 2'} />
-          <Task text={'Task 3'} />
         </View>
       </View>
+
+      {/* Add-a-task section */}
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      ></KeyboardAvoidingView>
     </View>
   );
 }
