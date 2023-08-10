@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Keyboard,
   KeyboardAvoidingView,
   StyleSheet,
   Text,
@@ -11,9 +12,10 @@ import Task from './components/Task';
 
 export default function App() {
   const [task, setTask] = useState();
-  const [taskItems, setTaskItems] = useState();
+  const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
+    Keyboard.dismiss();
     setTaskItems([...taskItems, task]);
     setTask(null);
   };
@@ -26,8 +28,10 @@ export default function App() {
 
         <View style={styles.items}>
           {/* Tasks will be displayed down here */}
-          <Task text={'Task 1'} />
-          <Task text={'Task 2'} />
+
+          {taskItems.map((item, index) => {
+            return <Task key={index} text={item} />;
+          })}
         </View>
       </View>
 
