@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -9,6 +10,8 @@ import {
 import Task from './components/Task';
 
 export default function App() {
+  const [task, setTask] = useState();
+
   return (
     <View style={styles.container}>
       {/* Today's todos */}
