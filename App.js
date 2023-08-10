@@ -6,7 +6,11 @@ export default function App() {
     <View style={styles.container}>
       {/* Today's todos */}
       <View style={styles.tasksWrapper}>
-        <Text>Today's tasks</Text>
+        <Text style={styles.sectionTitle}>Today's tasks</Text>
+
+        <View style={styles.items}>
+          {/* Tasks will be displayed down here */}
+        </View>
       </View>
     </View>
   );
@@ -17,4 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  tasksWrapper: {},
+  sectionTitle: {},
+  items: {},
 });
