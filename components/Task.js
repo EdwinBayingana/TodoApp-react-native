@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const Task = () => {
+const Task = ({ text }) => {
   return (
     <View>
-      <Text>This is a task</Text>
+      <Text>{text}</Text>
     </View>
   );
 };
